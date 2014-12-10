@@ -1,0 +1,16 @@
+﻿@model ComputerStoreFinal.Models.Order
+
+@{
+    ViewBag.Title = "Order Complete!";
+}
+
+<h2>Thank you for your order!</h2>
+<p>We'll ship your computer to the following address in 3-5 business days. Please allow up to one additional business day for order processsing.</p>
+
+<div class="panel panel-info">
+    <p>@Model.FirstName @Model.LastName</p>
+    <p>@Model.ShipAddress</p>
+    <p>@Model.City, @Model.State @Model.ZipCode</p>
+</div>
+
+<p>Your total is @Model.Total.ToString("C") and your order number is @Model.OrderID</p>

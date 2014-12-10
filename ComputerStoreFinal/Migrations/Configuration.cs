@@ -9,7 +9,7 @@ namespace ComputerStoreFinal.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ComputerStoreFinal.Models.ApplicationDbContext context)

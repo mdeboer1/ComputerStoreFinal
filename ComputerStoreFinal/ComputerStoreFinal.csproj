@@ -186,6 +186,10 @@
     <Compile Include="DataContexts\ComputerStoreMigrations\201412081852586_IDidNotSchemaTheDeputy.Designer.cs">
       <DependentUpon>201412081852586_IDidNotSchemaTheDeputy.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataContexts\ComputerStoreMigrations\201412082055022_IsThisLove.cs" />
+    <Compile Include="DataContexts\ComputerStoreMigrations\201412082055022_IsThisLove.Designer.cs">
+      <DependentUpon>201412082055022_IsThisLove.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataContexts\ComputerStoreMigrations\Configuration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -209,6 +213,25 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ComputerStoreImages\Asus 295x2.jpg" />
+    <Content Include="Content\ComputerStoreImages\Asus 970 Strix.jpg" />
+    <Content Include="Content\ComputerStoreImages\Asus 980 Strix.jpg" />
+    <Content Include="Content\ComputerStoreImages\ASUS MAXIMUS VII HERO.jpg" />
+    <Content Include="Content\ComputerStoreImages\Asus r9280x.jpg" />
+    <Content Include="Content\ComputerStoreImages\Asus Z97-P.jpg" />
+    <Content Include="Content\ComputerStoreImages\ASUS Z97-PRO LGA 1150.jpg" />
+    <Content Include="Content\ComputerStoreImages\Gskill Trident X-series.jpg" />
+    <Content Include="Content\ComputerStoreImages\Intel Core i5-4690K Devil%27s Canyon Quad-Core 3.5GHz.jpg" />
+    <Content Include="Content\ComputerStoreImages\Intel Core i7-4790K Haswell Quad-Core 4.0GHz.jpg" />
+    <Content Include="Content\ComputerStoreImages\NZXT 210.jpg" />
+    <Content Include="Content\ComputerStoreImages\NZXT 410 series Phanton.jpg" />
+    <Content Include="Content\ComputerStoreImages\NZXT Guardian 921.jpg" />
+    <Content Include="Content\ComputerStoreImages\RipJaw 16gb sniper.jpg" />
+    <Content Include="Content\ComputerStoreImages\RipJaw 8gb %282x4gb%29.jpg" />
+    <Content Include="Content\ComputerStoreImages\SAMSUNG 850 EVO-Series.jpg" />
+    <Content Include="Content\ComputerStoreImages\SeaSonic M12II 520 Bronze.jpg" />
+    <Content Include="Content\ComputerStoreImages\SeaSonic X Series X-850.jpg" />
+    <Content Include="Content\ComputerStoreImages\SeaSonic X-1250.jpg" />
     <Content Include="Content\Images\Office building.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -274,6 +297,7 @@
     <Content Include="Views\PartsManager\Edit.cshtml" />
     <Content Include="Views\PartsManager\Index.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\CheckOut\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataContexts\ComputerStoreMigrations\201412081852586_IDidNotSchemaTheDeputy.resx">
       <DependentUpon>201412081852586_IDidNotSchemaTheDeputy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContexts\ComputerStoreMigrations\201412082055022_IsThisLove.resx">
+      <DependentUpon>201412082055022_IsThisLove.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -140,7 +140,16 @@ namespace ComputerStoreFinal.Models
 
             }
             // Set the order's total to the orderTotal count
-            order.Total = orderTotal;
+            order.Subtotal = orderTotal;
+            // Free shipping for now
+            decimal shipping = 0;
+            order.ShippingTotal = orderTotal + shipping;
+            // Calculate tax
+            decimal salesTax = .051m * orderTotal;
+            order.SalesTax = salesTax;
+            order.Total = order.ShippingTotal + salesTax;
+
+            ComputerStoreDb.Orders.Add(order);
 
             // Save the order
             ComputerStoreDb.SaveChanges();

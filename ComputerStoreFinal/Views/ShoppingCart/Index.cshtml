@@ -69,26 +69,27 @@
        $(".RemoveLink").click(function()  {
 //  Get  the  id  from  the  link
 var recordToDelete  =  $(this).attr("data-­‐id");
-if(recordToDelete  !=  '')  {
+if(recordToDelete  !='')  {
 //  Perform  the  ajax  post
 $.post("@Url.Action("RemoveFromCart",  "ShoppingCart")",
-{"id":  recordToDelete  },
+{"id":  recordToDelete},
 function
  (data)  {
 //  Successful  requests  get  here-­‐  Update  the  page  elements
 if(data.ItemCount  ==  0)  {
 $('#row-­‐'+  data.DeleteID).fadeOut('slow');
-                           }
+}
 else
  {
  $('#item-­‐count-­‐'+  data.DeleteID).text(data.ItemCount);
  }
 $('#cart-­‐total').text(data.CartTotal);
 $('#update-­‐message').text(data.Message);
-$('#cart-­‐status').text('Cart  ('+  data.CartCount  +  ')');
+$('#cart-­‐status').text('Cart  ('+  data.CartCount  + ')');
                    });
                }
            });
    });
+
     </script>
 }

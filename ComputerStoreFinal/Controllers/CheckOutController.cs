@@ -12,6 +12,12 @@ namespace ComputerStoreFinal.Controllers
     {
         // GET: CheckOut
         ComputerStoreDb ComputerStoreDb = new ComputerStoreDb();
+
+        public ActionResult AddressAndPayment()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult AddressAndPayment(FormCollection values)
         {
@@ -26,21 +32,24 @@ namespace ComputerStoreFinal.Controllers
 
                 //Save order
                 ComputerStoreDb.Orders.Add(order);
+
                 ComputerStoreDb.SaveChanges();
 
                 //Process order
                 var cart = ShoppingCart.GetCart(this.HttpContext);
                 cart.CreateOrder(order);
 
-                return RedirectToAction("Complete", new { id = order.OrderID });
+                return RedirectToAction("Complete", order);
             }
-            catch
+            catch(Exception e)
             {
                 // invalid - redisplay with errors
+                System.Console.Out.WriteLine(e.GetType().ToString());
+                System.Console.Out.WriteLine(e.Message);
                 return View(order);
             }
         }
-        public ActionResult Complete(int? id)
+        public ActionResult Complete(Order id)
         {
             return View(id);
         }

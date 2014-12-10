@@ -32,6 +32,13 @@ namespace ComputerStoreFinal.Controllers
             return RedirectToAction("AddToCart", "ShoppingCart");
         }
 
+        public ActionResult Prebuilt()
+        {
+            var computers = ComputerStoreDb.Computers.ToList<Computer>();
+
+            return View();
+        }
+
         public ActionResult Browse()
         {
 
